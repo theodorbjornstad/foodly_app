@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60626D4E4590076E5FD /* AppDelegate.swift */; };
 		D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60826D4E4590076E5FD /* SceneDelegate.swift */; };
-		D714F60B26D4E4590076E5FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* ViewController.swift */; };
+		D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */; };
 		D714F60E26D4E4590076E5FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D714F60C26D4E4590076E5FD /* Main.storyboard */; };
 		D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D714F60F26D4E45B0076E5FD /* Assets.xcassets */; };
 		D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		D714F60326D4E4590076E5FD /* foodly_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodly_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714F60626D4E4590076E5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D714F60826D4E4590076E5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D714F60A26D4E4590076E5FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		D714F60D26D4E4590076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D714F60F26D4E45B0076E5FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D714F61226D4E45B0076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,23 @@
 		D714F60526D4E4590076E5FD /* foodly_app */ = {
 			isa = PBXGroup;
 			children = (
+				D7491BD926D672FC007AD36B /* Controllers */,
 				D714F60626D4E4590076E5FD /* AppDelegate.swift */,
 				D714F60826D4E4590076E5FD /* SceneDelegate.swift */,
-				D714F60A26D4E4590076E5FD /* ViewController.swift */,
 				D714F60C26D4E4590076E5FD /* Main.storyboard */,
 				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
 				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
 				D714F61426D4E45B0076E5FD /* Info.plist */,
 			);
 			path = foodly_app;
+			sourceTree = "<group>";
+		};
+		D7491BD926D672FC007AD36B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D714F60B26D4E4590076E5FD /* ViewController.swift in Sources */,
+				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
 				D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */,
 			);
