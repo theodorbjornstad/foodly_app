@@ -12,12 +12,7 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBOutlet weak var allRestaurantsTableView: UITableView!
     
-    let restaurants = [
-        "Peppes pizza",
-        "Dolly dimples",
-        "McDonalds",
-        "Burger King"
-    ]
+    var restaurants = [] as [Restaurant]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +20,14 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         allRestaurantsTableView.delegate = self
         allRestaurantsTableView.dataSource = self
         self.registerTableViewCells()
+        
+        APIManager.getAllRestaurants { (response) in
+            self.restaurants = response
+            self.allRestaurantsTableView.reloadData()
+        }
+        
+        print(restaurants.count)
+        
     }
     
     
@@ -34,12 +37,9 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell", for: indexPath) as? RestaurantListTableViewCell {
-            cell.restaurantNameLabel.text? = restaurants[indexPath.row]
-            cell.restaurantFirstAddressLabel.text? = "Scheelegatan 15"
-            cell.restaurantSecondAddressLabel.text? = "112 28 Stockholm"
-            cell.restaurantView.layer.cornerRadius = 10 // cell.restaurantView.frame.height / 2
-            
-            
+            cell.restaurantNameLabel.text? = restaurants[indexPath.row].name
+            cell.restaurantFirstAddressLabel.text? = restaurants[indexPath.row].address1
+            cell.restaurantSecondAddressLabel.text? = restaurants[indexPath.row].address2
             return cell
         }
         

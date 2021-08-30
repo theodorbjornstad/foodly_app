@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41FDD5CA726190470B66A73E /* Pods_foodly_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167997635D1D424113D5DD01 /* Pods_foodly_app.framework */; };
 		D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */; };
 		D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */; };
+		D70307B026DCF49900B6F8F1 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307AF26DCF49900B6F8F1 /* Restaurant.swift */; };
+		D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307B126DCF59A00B6F8F1 /* APIManager.swift */; };
 		D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60626D4E4590076E5FD /* AppDelegate.swift */; };
 		D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60826D4E4590076E5FD /* SceneDelegate.swift */; };
 		D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */; };
@@ -18,8 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167997635D1D424113D5DD01 /* Pods_foodly_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodly_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF1C4CF9168569DDA084505C /* Pods-foodly_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodly_app.debug.xcconfig"; path = "Target Support Files/Pods-foodly_app/Pods-foodly_app.debug.xcconfig"; sourceTree = "<group>"; };
 		D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
 		D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantListTableViewCell.xib; sourceTree = "<group>"; };
+		D70307AF26DCF49900B6F8F1 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		D70307B126DCF59A00B6F8F1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D714F60326D4E4590076E5FD /* foodly_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodly_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714F60626D4E4590076E5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D714F60826D4E4590076E5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,7 @@
 		D714F60F26D4E45B0076E5FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D714F61226D4E45B0076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D714F61426D4E45B0076E5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodly_app.release.xcconfig"; path = "Target Support Files/Pods-foodly_app/Pods-foodly_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +43,57 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FDD5CA726190470B66A73E /* Pods_foodly_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11ADAD2A23A4E5DABEB28542 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AF1C4CF9168569DDA084505C /* Pods-foodly_app.debug.xcconfig */,
+				F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B04D81F3FBDDB08E9DA63AA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				167997635D1D424113D5DD01 /* Pods_foodly_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D70307AD26DCEFE300B6F8F1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
+				D714F60C26D4E4590076E5FD /* Main.storyboard */,
+				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
+				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D70307AE26DCF47C00B6F8F1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D70307AF26DCF49900B6F8F1 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D714F5FA26D4E4590076E5FD = {
 			isa = PBXGroup;
 			children = (
 				D714F60526D4E4590076E5FD /* foodly_app */,
 				D714F60426D4E4590076E5FD /* Products */,
+				11ADAD2A23A4E5DABEB28542 /* Pods */,
+				B04D81F3FBDDB08E9DA63AA3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,25 +108,24 @@
 		D714F60526D4E4590076E5FD /* foodly_app */ = {
 			isa = PBXGroup;
 			children = (
-				D7491BD926D672FC007AD36B /* Controllers */,
+				D70307AE26DCF47C00B6F8F1 /* Model */,
+				D70307AD26DCEFE300B6F8F1 /* View */,
+				D7491BD926D672FC007AD36B /* Controller */,
 				D714F60626D4E4590076E5FD /* AppDelegate.swift */,
 				D714F60826D4E4590076E5FD /* SceneDelegate.swift */,
-				D714F60C26D4E4590076E5FD /* Main.storyboard */,
 				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
-				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
 				D714F61426D4E45B0076E5FD /* Info.plist */,
-				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
-				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
+				D70307B126DCF59A00B6F8F1 /* APIManager.swift */,
 			);
 			path = foodly_app;
 			sourceTree = "<group>";
 		};
-		D7491BD926D672FC007AD36B /* Controllers */ = {
+		D7491BD926D672FC007AD36B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */,
 			);
-			path = Controllers;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +135,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D714F61726D4E45B0076E5FD /* Build configuration list for PBXNativeTarget "foodly_app" */;
 			buildPhases = (
+				B3897953E29A486E3979BC61 /* [CP] Check Pods Manifest.lock */,
 				D714F5FF26D4E4590076E5FD /* Sources */,
 				D714F60026D4E4590076E5FD /* Frameworks */,
 				D714F60126D4E4590076E5FD /* Resources */,
+				BB3DE76CC94BFDFC22A38F72 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -147,11 +196,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B3897953E29A486E3979BC61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-foodly_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB3DE76CC94BFDFC22A38F72 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-foodly_app/Pods-foodly_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-foodly_app/Pods-foodly_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-foodly_app/Pods-foodly_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D714F5FF26D4E4590076E5FD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70307B026DCF49900B6F8F1 /* Restaurant.swift in Sources */,
+				D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */,
 				D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */,
 				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
@@ -299,6 +392,7 @@
 		};
 		D714F61826D4E45B0076E5FD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1C4CF9168569DDA084505C /* Pods-foodly_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,6 +411,7 @@
 		};
 		D714F61926D4E45B0076E5FD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
