@@ -21,10 +21,10 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+                    
         allRestaurantsTableView.delegate = self
         allRestaurantsTableView.dataSource = self
+        self.registerTableViewCells()
     }
     
     
@@ -33,13 +33,34 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Restaurant Cell ", for: indexPath)
-        cell.textLabel?.text = restaurants[indexPath.row]
-        return cell
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell", for: indexPath) as? RestaurantListTableViewCell {
+            cell.restaurantNameLabel.text? = restaurants[indexPath.row]
+            cell.restaurantFirstAddressLabel.text? = "Scheelegatan 15"
+            cell.restaurantSecondAddressLabel.text? = "112 28 Stockholm"
+            cell.restaurantView.layer.cornerRadius = 10 // cell.restaurantView.frame.height / 2
+            
+            
+            return cell
+        }
+        
+    
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return restaurants.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 110
+    }
+    
+    
+    
+    private func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
+        self.allRestaurantsTableView.register(textFieldCell, forCellReuseIdentifier: "RestaurantListTableViewCell")
+        
     }
     
 }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */; };
+		D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */; };
 		D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60626D4E4590076E5FD /* AppDelegate.swift */; };
 		D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60826D4E4590076E5FD /* SceneDelegate.swift */; };
 		D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantListTableViewCell.swift; sourceTree = "<group>"; };
+		D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RestaurantListTableViewCell.xib; sourceTree = "<group>"; };
 		D714F60326D4E4590076E5FD /* foodly_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodly_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714F60626D4E4590076E5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D714F60826D4E4590076E5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
 				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
 				D714F61426D4E45B0076E5FD /* Info.plist */,
+				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
+				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
 			);
 			path = foodly_app;
 			sourceTree = "<group>";
@@ -132,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */,
 				D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */,
 				D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */,
 				D714F60E26D4E4590076E5FD /* Main.storyboard in Resources */,
@@ -145,6 +152,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */,
 				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
 				D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */,
