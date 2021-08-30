@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-909" y="139"/>
         </scene>
-        <!--Restaurants-->
+        <!--All Restaurants-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainScreenViewController" customModule="foodly_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -57,17 +57,67 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="igo-kH-gMz" secondAttribute="trailing" id="iAA-zC-XZz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurants" id="bB6-20-V04"/>
+                    <navigationItem key="navigationItem" title="All Restaurants" id="bB6-20-V04"/>
                     <connections>
                         <outlet property="allRestaurantsTableView" destination="igo-kH-gMz" id="ZP3-y4-Vut"/>
+                        <segue destination="jmY-Ho-fNN" kind="show" identifier="ShowDetails" id="293-mS-7uR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="139"/>
         </scene>
+        <!--Restaurant Details View Controller-->
+        <scene sceneID="cp6-C6-xxr">
+            <objects>
+                <viewController storyboardIdentifier="Restaurant Details View" id="jmY-Ho-fNN" customClass="RestaurantDetailsViewController" customModule="foodly_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dh0-kt-yel">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zK5-Su-BKq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="NwZ-RQ-jy4">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NwZ-RQ-jy4" id="1kY-Zk-18e">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="lZC-Ra-uTp">
+                                        <rect key="frame" x="0.0" y="68" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lZC-Ra-uTp" id="ySU-ob-7Hu">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LcP-oG-AqE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zK5-Su-BKq" firstAttribute="leading" secondItem="LcP-oG-AqE" secondAttribute="leading" id="Ojm-EM-gLK"/>
+                            <constraint firstItem="LcP-oG-AqE" firstAttribute="bottom" secondItem="zK5-Su-BKq" secondAttribute="bottom" id="OoG-VL-mPQ"/>
+                            <constraint firstItem="zK5-Su-BKq" firstAttribute="top" secondItem="LcP-oG-AqE" secondAttribute="top" id="quU-U5-yna"/>
+                            <constraint firstItem="LcP-oG-AqE" firstAttribute="trailing" secondItem="zK5-Su-BKq" secondAttribute="trailing" id="x05-3x-oRO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gJF-Zo-IWe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAa-E4-lrR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139" y="139"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

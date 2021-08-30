@@ -9,7 +9,6 @@ import UIKit
 
 class RestaurantListTableViewCell: UITableViewCell {
 
-
     @IBOutlet weak var restaurantNameLabel: UILabel!
     @IBOutlet weak var restaurantFirstAddressLabel: UILabel!
     @IBOutlet weak var restaurantSecondAddressLabel: UILabel!

@@ -25,14 +25,14 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             self.restaurants = response
             self.allRestaurantsTableView.reloadData()
         }
-        
-        print(restaurants.count)
-        
     }
     
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        print("Tap registered")
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "Restaurant Details View") as? RestaurantDetailsViewController{
+            vc.currentRestaurant = restaurants[indexPath.row]
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,7 +54,8 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 110
     }
-    
+  
+
     
     
     private func registerTableViewCells() {
