@@ -22,6 +22,7 @@ class RestaurantDetailsViewController: UIViewController, UITableViewDelegate, UI
         self.menuTableView.delegate = self
         self.menuTableView.dataSource = self
         self.registerTableViewCells()
+        self.navigationItem.title = currentRestaurant?.name
     }
     
     
@@ -31,18 +32,38 @@ class RestaurantDetailsViewController: UIViewController, UITableViewDelegate, UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = menu[indexPath.section].items[indexPath.row]
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else {
-            return UITableViewCell()
+        
+        if item.category == "Pizzas"{
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell", for: indexPath) as? RestaurantListTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.restaurantNameLabel.text = item.name
+            cell.restaurantFirstAddressLabel.text = "\(item.price!)kr"
+            cell.restaurantSecondAddressLabel.text = item.topping?.joined(separator: ", ")
+            cell.restaurantSecondAddressLabel.adjustsFontSizeToFitWidth = true 
+            return cell
+            
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else {
+                return UITableViewCell()
+            }
+            cell.itemName.text? = item.name
+            
+            if item.price == 0{
+                cell.itemPrice.text = "Free"
+            } else {
+                cell.itemPrice.text = "\(item.price!)kr"
+            }
+            return cell
         }
-        cell.itemName.text? = item.name
-        cell.itemPrice.text = "\(item.price!)kr"
-        return cell
+        
     }
     
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        let textFieldCell2 = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
         self.menuTableView.register(textFieldCell, forCellReuseIdentifier: "MenuTableViewCell")
-        
+        self.menuTableView.register(textFieldCell2, forCellReuseIdentifier: "RestaurantListTableViewCell")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -53,9 +74,9 @@ class RestaurantDetailsViewController: UIViewController, UITableViewDelegate, UI
         return menu[section].category
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = menu[indexPath.section].items[indexPath.row]
+        CartManager.shared.addToCart(menuItem: item)
+    }
     
-    
-    
-    
-
 }

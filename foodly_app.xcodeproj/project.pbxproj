@@ -17,6 +17,9 @@
 		D70307BC26DE1A0A00B6F8F1 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */; };
 		D70307BF26DE256C00B6F8F1 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */; };
 		D70307C026DE256C00B6F8F1 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */; };
+		D70307C226DE4AB000B6F8F1 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307C126DE4AB000B6F8F1 /* CartViewController.swift */; };
+		D70307C426DE57FA00B6F8F1 /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307C326DE57FA00B6F8F1 /* CartManager.swift */; };
+		D70307C626DE58B900B6F8F1 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307C526DE58B900B6F8F1 /* Cart.swift */; };
 		D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60626D4E4590076E5FD /* AppDelegate.swift */; };
 		D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60826D4E4590076E5FD /* SceneDelegate.swift */; };
 		D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */; };
@@ -37,6 +40,9 @@
 		D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
 		D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
+		D70307C126DE4AB000B6F8F1 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		D70307C326DE57FA00B6F8F1 /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		D70307C526DE58B900B6F8F1 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		D714F60326D4E4590076E5FD /* foodly_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodly_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714F60626D4E4590076E5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D714F60826D4E4590076E5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,12 +86,9 @@
 		D70307AD26DCEFE300B6F8F1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
+				D70307C726DE683700B6F8F1 /* cells */,
 				D714F60C26D4E4590076E5FD /* Main.storyboard */,
 				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
-				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
-				D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */,
-				D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,8 +99,20 @@
 				D70307AF26DCF49900B6F8F1 /* Restaurant.swift */,
 				D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */,
 				D70307B526DD1AA700B6F8F1 /* MenuItem.swift */,
+				D70307C526DE58B900B6F8F1 /* Cart.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D70307C726DE683700B6F8F1 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
+				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
+				D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */,
+				D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		D714F5FA26D4E4590076E5FD = {
@@ -129,6 +144,7 @@
 				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
 				D714F61426D4E45B0076E5FD /* Info.plist */,
 				D70307B126DCF59A00B6F8F1 /* APIManager.swift */,
+				D70307C326DE57FA00B6F8F1 /* CartManager.swift */,
 			);
 			path = foodly_app;
 			sourceTree = "<group>";
@@ -136,6 +152,7 @@
 		D7491BD926D672FC007AD36B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D70307C126DE4AB000B6F8F1 /* CartViewController.swift */,
 				D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */,
 				D70307B326DD05C000B6F8F1 /* RestaurantDetailsViewController.swift */,
 			);
@@ -259,12 +276,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70307B026DCF49900B6F8F1 /* Restaurant.swift in Sources */,
+				D70307C426DE57FA00B6F8F1 /* CartManager.swift in Sources */,
 				D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */,
+				D70307C626DE58B900B6F8F1 /* Cart.swift in Sources */,
 				D70307B626DD1AA700B6F8F1 /* MenuItem.swift in Sources */,
 				D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */,
 				D70307BF26DE256C00B6F8F1 /* MenuTableViewCell.swift in Sources */,
 				D70307BC26DE1A0A00B6F8F1 /* MenuSection.swift in Sources */,
 				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
+				D70307C226DE4AB000B6F8F1 /* CartViewController.swift in Sources */,
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
 				D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */,
 				D70307B426DD05C000B6F8F1 /* RestaurantDetailsViewController.swift in Sources */,

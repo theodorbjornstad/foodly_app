@@ -13,5 +13,5 @@ struct Restaurant: Decodable {
     let latitude, longitude: Double
 }
 
-//typealias Restaurants = [Restaurant]
+
 

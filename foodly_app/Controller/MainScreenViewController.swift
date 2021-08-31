@@ -14,6 +14,7 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     
     var restaurants = [] as [Restaurant]
     var menu = [] as [MenuSection]
+    static var cart = [] as [MenuItem]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         allRestaurantsTableView.delegate = self
         allRestaurantsTableView.dataSource = self
         self.registerTableViewCells()
-        
+        self.navigationItem.backButtonTitle = " "
         fetchRestaurantInfo()
     }
     
@@ -93,8 +94,11 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
             }
         }
         
-        return [MenuSection(category: "Pizzas", items: pizzas), MenuSection(category: "Sides'", items: sides), MenuSection(category: "Drinks", items: drinks)]
+        return [MenuSection(category: "🍕 Pizzas ", items: pizzas), MenuSection(category: "🥗 Sides", items: sides), MenuSection(category: "🥤 Drinks", items: drinks)]
     }
+    
+    
+    
 
         
 }

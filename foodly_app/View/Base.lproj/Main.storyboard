@@ -57,7 +57,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="igo-kH-gMz" secondAttribute="trailing" id="iAA-zC-XZz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="All Restaurants" id="bB6-20-V04"/>
+                    <navigationItem key="navigationItem" title="All Restaurants" id="bae-Hm-67E">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="Zai-6H-mrw">
+                            <connections>
+                                <segue destination="yqY-ye-dat" kind="show" id="gKv-1c-oVX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="allRestaurantsTableView" destination="igo-kH-gMz" id="ZP3-y4-Vut"/>
                         <segue destination="jmY-Ho-fNN" kind="show" identifier="ShowDetails" id="293-mS-7uR"/>
@@ -67,7 +73,38 @@
             </objects>
             <point key="canvasLocation" x="139" y="139"/>
         </scene>
-        <!--Restaurant Details View Controller-->
+        <!--Cart-->
+        <scene sceneID="aBR-i9-Sbh">
+            <objects>
+                <viewController id="yqY-ye-dat" customClass="CartViewController" customModule="foodly_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i4b-aS-Wvq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HvV-Ip-e5H">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y0B-DM-Sl9"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="HvV-Ip-e5H" firstAttribute="leading" secondItem="y0B-DM-Sl9" secondAttribute="leading" id="NQJ-2z-MSD"/>
+                            <constraint firstItem="y0B-DM-Sl9" firstAttribute="bottom" secondItem="HvV-Ip-e5H" secondAttribute="bottom" id="dRp-xA-dlP"/>
+                            <constraint firstItem="HvV-Ip-e5H" firstAttribute="top" secondItem="y0B-DM-Sl9" secondAttribute="top" id="ecR-zZ-wjN"/>
+                            <constraint firstItem="y0B-DM-Sl9" firstAttribute="trailing" secondItem="HvV-Ip-e5H" secondAttribute="trailing" id="euV-EZ-XBM"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cart" id="g2h-p5-jpj"/>
+                    <connections>
+                        <outlet property="cartTableView" destination="HvV-Ip-e5H" id="1oN-oL-1hQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GJE-7W-s5r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="675" y="-629"/>
+        </scene>
+        <!--Menu-->
         <scene sceneID="cp6-C6-xxr">
             <objects>
                 <viewController storyboardIdentifier="Restaurant Details View" id="jmY-Ho-fNN" customClass="RestaurantDetailsViewController" customModule="foodly_app" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,7 +139,14 @@
                             <constraint firstItem="LcP-oG-AqE" firstAttribute="trailing" secondItem="zK5-Su-BKq" secondAttribute="trailing" id="x05-3x-oRO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="gJF-Zo-IWe"/>
+                    <navigationItem key="navigationItem" title="Menu" id="gJF-Zo-IWe">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="FW2-ZD-pEO">
+                            <connections>
+                                <segue destination="yqY-ye-dat" kind="show" id="BB7-pq-ZCo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="menuTableView" destination="zK5-Su-BKq" id="wmb-ZU-cWP"/>
                     </connections>
@@ -112,7 +156,11 @@
             <point key="canvasLocation" x="1139" y="139"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="gKv-1c-oVX"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
