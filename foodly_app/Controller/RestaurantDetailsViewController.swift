@@ -10,35 +10,52 @@ import UIKit
 class RestaurantDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
    
     var currentRestaurant: Restaurant?
-    var menu = [] as [MenuItem]
+    var menu = [MenuSection]()
+    
+    @IBOutlet weak var menuTableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let restaurantId = currentRestaurant?.id {
-            APIManager.getMenuById(restaurantID: restaurantId) { (response) in
-                //self.menu = response
-                self.responseToSections(response: response)
-                print(self.menu)
-            }
-        }
-        
+        self.menuTableView.delegate = self
+        self.menuTableView.dataSource = self
+        self.registerTableViewCells()
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // implement
-        return 0
+        return menu[section].items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // implement
-        return UITableViewCell()
+        let item = menu[indexPath.section].items[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.itemName.text? = item.name
+        cell.itemPrice.text = "\(item.price!)kr"
+        return cell
     }
     
-    private func responseToSections(response: [MenuItem]) {
-        // implement sorting function that sorts response into categories?        
+    private func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        self.menuTableView.register(textFieldCell, forCellReuseIdentifier: "MenuTableViewCell")
+        
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return menu.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return menu[section].category
+    }
+    
+    
+    
+    
     
 
 }

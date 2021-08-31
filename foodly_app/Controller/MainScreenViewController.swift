@@ -13,6 +13,7 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet weak var allRestaurantsTableView: UITableView!
     
     var restaurants = [] as [Restaurant]
+    var menu = [] as [MenuSection]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,15 +22,13 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
         allRestaurantsTableView.dataSource = self
         self.registerTableViewCells()
         
-        APIManager.getAllRestaurants { (response) in
-            self.restaurants = response
-            self.allRestaurantsTableView.reloadData()
-        }
+        fetchRestaurantInfo()
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "Restaurant Details View") as? RestaurantDetailsViewController{
+            vc.menu = menu
             vc.currentRestaurant = restaurants[indexPath.row]
             self.navigationController?.pushViewController(vc, animated: true)
         }
@@ -56,15 +55,51 @@ class MainScreenViewController: UIViewController, UITableViewDelegate, UITableVi
     }
   
 
-    
-    
     private func registerTableViewCells() {
         let textFieldCell = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
         self.allRestaurantsTableView.register(textFieldCell, forCellReuseIdentifier: "RestaurantListTableViewCell")
         
     }
     
+    
+    private func fetchRestaurantInfo() {
+        APIManager.getAllRestaurants { (response) in
+            self.restaurants = response
+            self.allRestaurantsTableView.reloadData()
+        }
+        
+       APIManager.getMenuById(restaurantID: 0) { (response) in
+            self.menu = self.filterMenu(theMenu: response)
+            print(self.menu)
+        }
+    }
+    
+    
+    private func filterMenu(theMenu: [MenuItem]) -> [MenuSection]{
+        var pizzas = [MenuItem]()
+        var sides = [MenuItem]()
+        var drinks = [MenuItem]()
+        
+        for item in theMenu {
+            switch item.category {
+            case "Pizzas":
+                pizzas.append(item)
+            case "Sides":
+                sides.append(item)
+            case "Drinks":
+                drinks.append(item)
+            default:
+                break
+            }
+        }
+        
+        return [MenuSection(category: "Pizzas", items: pizzas), MenuSection(category: "Sides'", items: sides), MenuSection(category: "Drinks", items: drinks)]
+    }
+
+        
 }
+    
+    
 
 
 

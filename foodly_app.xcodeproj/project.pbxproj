@@ -14,6 +14,9 @@
 		D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307B126DCF59A00B6F8F1 /* APIManager.swift */; };
 		D70307B426DD05C000B6F8F1 /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307B326DD05C000B6F8F1 /* RestaurantDetailsViewController.swift */; };
 		D70307B626DD1AA700B6F8F1 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307B526DD1AA700B6F8F1 /* MenuItem.swift */; };
+		D70307BC26DE1A0A00B6F8F1 /* MenuSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */; };
+		D70307BF26DE256C00B6F8F1 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */; };
+		D70307C026DE256C00B6F8F1 /* MenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */; };
 		D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60626D4E4590076E5FD /* AppDelegate.swift */; };
 		D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60826D4E4590076E5FD /* SceneDelegate.swift */; };
 		D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */; };
@@ -31,6 +34,9 @@
 		D70307B126DCF59A00B6F8F1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		D70307B326DD05C000B6F8F1 /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
 		D70307B526DD1AA700B6F8F1 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSection.swift; sourceTree = "<group>"; };
+		D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuTableViewCell.xib; sourceTree = "<group>"; };
 		D714F60326D4E4590076E5FD /* foodly_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = foodly_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D714F60626D4E4590076E5FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D714F60826D4E4590076E5FD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,8 @@
 				D714F60C26D4E4590076E5FD /* Main.storyboard */,
 				D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */,
 				D70307A926DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib */,
+				D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */,
+				D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D70307AF26DCF49900B6F8F1 /* Restaurant.swift */,
+				D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */,
 				D70307B526DD1AA700B6F8F1 /* MenuItem.swift */,
 			);
 			path = Model;
@@ -195,6 +204,7 @@
 				D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */,
 				D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */,
 				D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */,
+				D70307C026DE256C00B6F8F1 /* MenuTableViewCell.xib in Resources */,
 				D714F60E26D4E4590076E5FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +262,8 @@
 				D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */,
 				D70307B626DD1AA700B6F8F1 /* MenuItem.swift in Sources */,
 				D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */,
+				D70307BF26DE256C00B6F8F1 /* MenuTableViewCell.swift in Sources */,
+				D70307BC26DE1A0A00B6F8F1 /* MenuSection.swift in Sources */,
 				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
 				D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */,

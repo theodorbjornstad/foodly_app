@@ -60,6 +60,7 @@ enum APIManager: URLRequestConvertible {
         }
     }
     
+    // remove parametere: response is same for all ids 
     static func getMenuById(restaurantID: Int, onCompletion: @escaping ([MenuItem]) -> Void) {
         AF.request(APIManager.getMenuById(restaurantId: restaurantID)).responseJSON {(json) in
             if let jsonData = json.data {
