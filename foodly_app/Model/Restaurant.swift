@@ -11,6 +11,7 @@ struct Restaurant: Decodable {
     let id: Int
     let name, address1, address2: String
     let latitude, longitude: Double
+    var distanceTo: Double?
 }
 
 

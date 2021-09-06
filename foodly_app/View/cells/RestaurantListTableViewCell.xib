@@ -21,7 +21,7 @@
                         <rect key="frame" x="16" y="11" width="288" height="84"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Restaurant Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMx-gV-E5E">
-                                <rect key="frame" x="20" y="5" width="248" height="28"/>
+                                <rect key="frame" x="20" y="5" width="132" height="28"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -32,7 +32,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Address 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-lG-xmn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="        " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PCw-lG-xmn">
                                 <rect key="frame" x="20" y="61" width="248" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
@@ -49,7 +49,6 @@
                             <constraint firstAttribute="bottom" secondItem="PCw-lG-xmn" secondAttribute="bottom" constant="5" id="cgy-UY-LZd"/>
                             <constraint firstAttribute="trailing" secondItem="rIg-Ij-Z9J" secondAttribute="trailing" constant="20" id="e9G-Jy-wWi"/>
                             <constraint firstAttribute="trailing" secondItem="PCw-lG-xmn" secondAttribute="trailing" constant="20" id="kHv-MU-dCV"/>
-                            <constraint firstAttribute="trailing" secondItem="oMx-gV-E5E" secondAttribute="trailing" constant="20" id="pim-qP-mYE"/>
                             <constraint firstItem="rIg-Ij-Z9J" firstAttribute="top" secondItem="oMx-gV-E5E" secondAttribute="bottom" constant="5" id="z38-H4-yAg"/>
                         </constraints>
                     </view>

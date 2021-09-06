@@ -14,6 +14,10 @@ class RestaurantListTableViewCell: UITableViewCell {
     @IBOutlet weak var restaurantSecondAddressLabel: UILabel!
     @IBOutlet weak var restaurantView: UIView!
     
+    
+    
+    static let identifier = "RestaurantListTableViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

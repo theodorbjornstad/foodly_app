@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CartViewController: UIViewController {
     
     @IBOutlet weak var cartTableView: UITableView!
     
@@ -19,13 +19,41 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.cartTableView.delegate = self
         self.cartTableView.dataSource = self
         self.registerTableViewCells()
-        
+        self.navigationItem.backButtonTitle = " "
         currentCart = CartManager.shared.getCart()
     }
     
+    private func registerTableViewCells() {
+        let textFieldCell = UINib(nibName: "MenuTableViewCell", bundle: nil)
+        let textFieldCell2 = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
+        self.cartTableView.register(textFieldCell, forCellReuseIdentifier: "MenuTableViewCell")
+        self.cartTableView.register(textFieldCell2, forCellReuseIdentifier: "RestaurantListTableViewCell")
+    }
+    
+    
+    
+    
+}
+
+// MARK: - TableView Delegate
+
+extension CartViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //CartManager.shared.removeFromCart(index: indexPath.row)
+        //cartTableView.reloadData()
+    }
+    
+    
+}
+
+
+// MARK: - TableView DataSource
+
+extension CartViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentCart?.menuItems.count ?? 0
+        return CartManager.shared.getCart().menuItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,18 +83,18 @@ class CartViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    private func registerTableViewCells() {
-        let textFieldCell = UINib(nibName: "MenuTableViewCell", bundle: nil)
-        let textFieldCell2 = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
-        self.cartTableView.register(textFieldCell, forCellReuseIdentifier: "MenuTableViewCell")
-        self.cartTableView.register(textFieldCell2, forCellReuseIdentifier: "RestaurantListTableViewCell")
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
     }
     
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let item = currentCart?.menuItems[indexPath.row]
-        CartManager.shared.addToCart(menuItem: item)
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            cartTableView.beginUpdates()
+            CartManager.shared.removeFromCart(index: indexPath.row)
+            cartTableView.deleteRows(at: [indexPath], with: .fade)
+            cartTableView.endUpdates()
+        }
     }
-    
-
 }
+
+

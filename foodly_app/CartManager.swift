@@ -20,7 +20,9 @@ class CartManager {
         cart.menuItems.append(menuItem)
     }
     
-    func removeFromCart(menuItem: MenuItem) {
-        // implement
+    func removeFromCart(index: Int) {
+        if(index < cart.menuItems.count) {
+            cart.menuItems.remove(at: index)
+        }
     }
 }

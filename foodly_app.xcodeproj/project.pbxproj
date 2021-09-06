@@ -50,7 +50,7 @@
 		D714F60D26D4E4590076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D714F60F26D4E45B0076E5FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D714F61226D4E45B0076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D714F61426D4E45B0076E5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D714F61426D4E45B0076E5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "foodly_app/Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
 		F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodly_app.release.xcconfig"; path = "Target Support Files/Pods-foodly_app/Pods-foodly_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,13 +136,10 @@
 		D714F60526D4E4590076E5FD /* foodly_app */ = {
 			isa = PBXGroup;
 			children = (
+				D74D18E226E612F4009F8503 /* Supporting files */,
 				D70307AE26DCF47C00B6F8F1 /* Model */,
 				D70307AD26DCEFE300B6F8F1 /* View */,
 				D7491BD926D672FC007AD36B /* Controller */,
-				D714F60626D4E4590076E5FD /* AppDelegate.swift */,
-				D714F60826D4E4590076E5FD /* SceneDelegate.swift */,
-				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
-				D714F61426D4E45B0076E5FD /* Info.plist */,
 				D70307B126DCF59A00B6F8F1 /* APIManager.swift */,
 				D70307C326DE57FA00B6F8F1 /* CartManager.swift */,
 			);
@@ -157,6 +154,17 @@
 				D70307B326DD05C000B6F8F1 /* RestaurantDetailsViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D74D18E226E612F4009F8503 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D714F60626D4E4590076E5FD /* AppDelegate.swift */,
+				D714F60826D4E4590076E5FD /* SceneDelegate.swift */,
+				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
+				D714F61426D4E45B0076E5FD /* Info.plist */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,7 +444,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = foodly_app/Info.plist;
+				INFOPLIST_FILE = "foodly_app/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -455,7 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = foodly_app/Info.plist;
+				INFOPLIST_FILE = "foodly_app/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
