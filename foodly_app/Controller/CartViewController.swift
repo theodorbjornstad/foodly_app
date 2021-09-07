@@ -11,28 +11,24 @@ class CartViewController: UIViewController {
     
     @IBOutlet weak var cartTableView: UITableView!
     
-    var currentCart: Cart?
+    fileprivate var currentCart: Cart?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         self.cartTableView.delegate = self
         self.cartTableView.dataSource = self
         self.registerTableViewCells()
         self.navigationItem.backButtonTitle = " "
         currentCart = CartManager.shared.getCart()
+        
     }
     
     private func registerTableViewCells() {
-        let textFieldCell = UINib(nibName: "MenuTableViewCell", bundle: nil)
-        let textFieldCell2 = UINib(nibName: "RestaurantListTableViewCell", bundle: nil)
-        self.cartTableView.register(textFieldCell, forCellReuseIdentifier: "MenuTableViewCell")
-        self.cartTableView.register(textFieldCell2, forCellReuseIdentifier: "RestaurantListTableViewCell")
+        let textFieldCell = UINib(nibName: CheckoutTableViewCell.identifier, bundle: nil)
+        self.cartTableView.register(textFieldCell, forCellReuseIdentifier: CheckoutTableViewCell.identifier)
+
     }
-    
-    
-    
-    
 }
 
 // MARK: - TableView Delegate
@@ -53,48 +49,26 @@ extension CartViewController: UITableViewDelegate {
 extension CartViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CartManager.shared.getCart().menuItems.count
+        return CartManager.shared.getCart().cartItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = currentCart?.menuItems[indexPath.row]
+        let cartItem = currentCart?.cartItems[indexPath.row]
         
-        if item?.category == "Pizzas"{
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantListTableViewCell", for: indexPath) as? RestaurantListTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.restaurantNameLabel.text = item?.name
-            cell.restaurantFirstAddressLabel.text = "\(item!.price!)kr"
-            cell.restaurantSecondAddressLabel.text = item?.topping?.joined(separator: ", ")
-            cell.restaurantSecondAddressLabel.adjustsFontSizeToFitWidth = true
-            return cell
-        } else {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath) as? MenuTableViewCell else {
-                return UITableViewCell()
-            }
-            cell.itemName.text? = item!.name
-            
-            if item!.price == 0{
-                cell.itemPrice.text = "Free"
-            } else {
-                cell.itemPrice.text = "\(item!.price!)kr"
-            }
-            return cell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: CheckoutTableViewCell.identifier, for: indexPath) as? CheckoutTableViewCell else {
+            return UITableViewCell()
         }
+        cell.itemNameLabel.text = "\(cartItem!.menuItem.name)"
+        cell.itemPriceLabel.text = "\(cartItem!.getTotalPrice()) kr" // total price
+        cell.quanityLabel.text = "\(cartItem?.getQuantity() ?? 0)" // String(cartItem?.getQuantity())
+        return cell
     }
     
-    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
-        return .delete
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 135
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            cartTableView.beginUpdates()
-            CartManager.shared.removeFromCart(index: indexPath.row)
-            cartTableView.deleteRows(at: [indexPath], with: .fade)
-            cartTableView.endUpdates()
-        }
-    }
+    
 }
 
 

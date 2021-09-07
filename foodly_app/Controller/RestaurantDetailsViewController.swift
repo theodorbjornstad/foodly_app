@@ -44,7 +44,7 @@ extension RestaurantDetailsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = menu[indexPath.section].items[indexPath.row]
-        CartManager.shared.addToCart(menuItem: item)
+        CartManager.shared.addToCart(chosenMenuItem: item)
     }
 }
 

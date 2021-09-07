@@ -26,6 +26,10 @@
 		D714F60E26D4E4590076E5FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D714F60C26D4E4590076E5FD /* Main.storyboard */; };
 		D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D714F60F26D4E45B0076E5FD /* Assets.xcassets */; };
 		D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D714F61126D4E45B0076E5FD /* LaunchScreen.storyboard */; };
+		D74D18E526E74FC2009F8503 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74D18E426E74FC2009F8503 /* CartItem.swift */; };
+		D74D18ED26E76AE5009F8503 /* CartBottomViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74D18EC26E76AE5009F8503 /* CartBottomViewViewController.swift */; };
+		D74D18F026E79D5F009F8503 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74D18EE26E79D5F009F8503 /* CheckoutTableViewCell.swift */; };
+		D74D18F126E79D5F009F8503 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D18EF26E79D5F009F8503 /* CheckoutTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +55,10 @@
 		D714F60F26D4E45B0076E5FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D714F61226D4E45B0076E5FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D714F61426D4E45B0076E5FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "foodly_app/Supporting files/Info.plist"; sourceTree = SOURCE_ROOT; };
+		D74D18E426E74FC2009F8503 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		D74D18EC26E76AE5009F8503 /* CartBottomViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBottomViewViewController.swift; sourceTree = "<group>"; };
+		D74D18EE26E79D5F009F8503 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
+		D74D18EF26E79D5F009F8503 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
 		F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodly_app.release.xcconfig"; path = "Target Support Files/Pods-foodly_app/Pods-foodly_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +108,7 @@
 				D70307BB26DE1A0A00B6F8F1 /* MenuSection.swift */,
 				D70307B526DD1AA700B6F8F1 /* MenuItem.swift */,
 				D70307C526DE58B900B6F8F1 /* Cart.swift */,
+				D74D18E426E74FC2009F8503 /* CartItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +120,8 @@
 				D70307A826DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift */,
 				D70307BE26DE256C00B6F8F1 /* MenuTableViewCell.xib */,
 				D70307BD26DE256C00B6F8F1 /* MenuTableViewCell.swift */,
+				D74D18EE26E79D5F009F8503 /* CheckoutTableViewCell.swift */,
+				D74D18EF26E79D5F009F8503 /* CheckoutTableViewCell.xib */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -149,6 +160,7 @@
 		D7491BD926D672FC007AD36B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D74D18EC26E76AE5009F8503 /* CartBottomViewViewController.swift */,
 				D70307C126DE4AB000B6F8F1 /* CartViewController.swift */,
 				D714F60A26D4E4590076E5FD /* MainScreenViewController.swift */,
 				D70307B326DD05C000B6F8F1 /* RestaurantDetailsViewController.swift */,
@@ -227,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */,
+				D74D18F126E79D5F009F8503 /* CheckoutTableViewCell.xib in Resources */,
 				D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */,
 				D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */,
 				D70307C026DE256C00B6F8F1 /* MenuTableViewCell.xib in Resources */,
@@ -286,9 +299,11 @@
 				D70307B026DCF49900B6F8F1 /* Restaurant.swift in Sources */,
 				D70307C426DE57FA00B6F8F1 /* CartManager.swift in Sources */,
 				D70307B226DCF59A00B6F8F1 /* APIManager.swift in Sources */,
+				D74D18ED26E76AE5009F8503 /* CartBottomViewViewController.swift in Sources */,
 				D70307C626DE58B900B6F8F1 /* Cart.swift in Sources */,
 				D70307B626DD1AA700B6F8F1 /* MenuItem.swift in Sources */,
 				D70307AA26DCBC4700B6F8F1 /* RestaurantListTableViewCell.swift in Sources */,
+				D74D18E526E74FC2009F8503 /* CartItem.swift in Sources */,
 				D70307BF26DE256C00B6F8F1 /* MenuTableViewCell.swift in Sources */,
 				D70307BC26DE1A0A00B6F8F1 /* MenuSection.swift in Sources */,
 				D714F60B26D4E4590076E5FD /* MainScreenViewController.swift in Sources */,
@@ -296,6 +311,7 @@
 				D714F60726D4E4590076E5FD /* AppDelegate.swift in Sources */,
 				D714F60926D4E4590076E5FD /* SceneDelegate.swift in Sources */,
 				D70307B426DD05C000B6F8F1 /* RestaurantDetailsViewController.swift in Sources */,
+				D74D18F026E79D5F009F8503 /* CheckoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

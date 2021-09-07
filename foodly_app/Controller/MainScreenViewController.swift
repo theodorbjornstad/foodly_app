@@ -28,7 +28,7 @@ class MainScreenViewController: UIViewController, CLLocationManagerDelegate {
         
         self.registerTableViewCells()
         self.navigationItem.backButtonTitle = " "
-    
+        
         fetchRestaurantInfo()
     }
     

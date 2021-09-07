@@ -8,5 +8,5 @@
 import Foundation
 
 struct Cart {
-    var menuItems: [MenuItem]
+    var cartItems: [CartItem]
 }
