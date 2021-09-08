@@ -64,9 +64,10 @@ extension RestaurantDetailsViewController: UITableViewDataSource {
                 return UITableViewCell()
             }
             cell.restaurantNameLabel.text = item.name
-            cell.restaurantFirstAddressLabel.text = "\(item.price!)kr"
-            cell.restaurantSecondAddressLabel.text = item.topping?.joined(separator: ", ")
-            cell.restaurantSecondAddressLabel.adjustsFontSizeToFitWidth = true
+            cell.restaurantFirstAddressLabel.text = item.topping?.joined(separator: ", ")
+            cell.restaurantFirstAddressLabel.adjustsFontSizeToFitWidth = true
+            cell.restaurantSecondAddressLabel.text = "\(item.price!)kr"
+
             return cell
             
         } else {

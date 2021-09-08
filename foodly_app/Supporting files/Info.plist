@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nexa-Trial-LightItalic.ttf</string>
+		<string>Nexa-Trial-Bold.ttf</string>
+		<string>Nexa-Trial-Book.ttf</string>
+	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>&quot;The app uses your location to estimate the distance to the restaurants&quot;</string>
 	<key></key>

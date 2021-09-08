@@ -22,6 +22,9 @@ class RestaurantListTableViewCell: UITableViewCell {
         super.awakeFromNib()
         
         restaurantView.layer.cornerRadius = 10
+        restaurantNameLabel.font = UIFont(name: "Nexa-Trial-Bold", size: 17)
+        restaurantFirstAddressLabel.font = UIFont(name: "Nexa-Trial-LightItalic", size: 15)
+        restaurantSecondAddressLabel.font = UIFont(name: "Nexa-Trial-Book", size: 15)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

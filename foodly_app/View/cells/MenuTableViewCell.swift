@@ -18,6 +18,9 @@ class MenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         menuItemView.layer.cornerRadius = 10
+        
+        itemName.font = UIFont(name: "Nexa-Trial-Bold", size: 17)
+        itemPrice.font = UIFont(name: "Nexa-Trial-Book", size: 15)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

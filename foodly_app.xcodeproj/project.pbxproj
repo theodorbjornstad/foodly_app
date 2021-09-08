@@ -30,6 +30,9 @@
 		D74D18ED26E76AE5009F8503 /* CartBottomViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74D18EC26E76AE5009F8503 /* CartBottomViewViewController.swift */; };
 		D74D18F026E79D5F009F8503 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74D18EE26E79D5F009F8503 /* CheckoutTableViewCell.swift */; };
 		D74D18F126E79D5F009F8503 /* CheckoutTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74D18EF26E79D5F009F8503 /* CheckoutTableViewCell.xib */; };
+		D780B29E26E8EFA4005C065C /* Nexa-Trial-Book.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D780B29D26E8EFA4005C065C /* Nexa-Trial-Book.ttf */; };
+		D780B2A026E8EFB9005C065C /* Nexa-Trial-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D780B29F26E8EFB9005C065C /* Nexa-Trial-Bold.ttf */; };
+		D780B2A226E8EFCF005C065C /* Nexa-Trial-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D780B2A126E8EFCF005C065C /* Nexa-Trial-LightItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		D74D18EC26E76AE5009F8503 /* CartBottomViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBottomViewViewController.swift; sourceTree = "<group>"; };
 		D74D18EE26E79D5F009F8503 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		D74D18EF26E79D5F009F8503 /* CheckoutTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CheckoutTableViewCell.xib; sourceTree = "<group>"; };
+		D780B29D26E8EFA4005C065C /* Nexa-Trial-Book.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nexa-Trial-Book.ttf"; path = "../../../../../../../Nexa/Non-commercial/Nexa/TTF/Nexa-Trial-Book.ttf"; sourceTree = "<group>"; };
+		D780B29F26E8EFB9005C065C /* Nexa-Trial-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nexa-Trial-Bold.ttf"; path = "../../../../../../../Nexa/Non-commercial/Nexa/TTF/Nexa-Trial-Bold.ttf"; sourceTree = "<group>"; };
+		D780B2A126E8EFCF005C065C /* Nexa-Trial-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Nexa-Trial-LightItalic.ttf"; path = "../../../../../../../Nexa/Non-commercial/Nexa/TTF/Nexa-Trial-LightItalic.ttf"; sourceTree = "<group>"; };
 		F581ED3ED95CB1CE70EB07D6 /* Pods-foodly_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodly_app.release.xcconfig"; path = "Target Support Files/Pods-foodly_app/Pods-foodly_app.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,12 +177,23 @@
 		D74D18E226E612F4009F8503 /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				D780B29A26E8EF47005C065C /* Fonts */,
 				D714F60626D4E4590076E5FD /* AppDelegate.swift */,
 				D714F60826D4E4590076E5FD /* SceneDelegate.swift */,
 				D714F60F26D4E45B0076E5FD /* Assets.xcassets */,
 				D714F61426D4E45B0076E5FD /* Info.plist */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		D780B29A26E8EF47005C065C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D780B2A126E8EFCF005C065C /* Nexa-Trial-LightItalic.ttf */,
+				D780B29D26E8EFA4005C065C /* Nexa-Trial-Book.ttf */,
+				D780B29F26E8EFB9005C065C /* Nexa-Trial-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,8 +257,11 @@
 			files = (
 				D70307AB26DCBC4700B6F8F1 /* RestaurantListTableViewCell.xib in Resources */,
 				D74D18F126E79D5F009F8503 /* CheckoutTableViewCell.xib in Resources */,
+				D780B2A026E8EFB9005C065C /* Nexa-Trial-Bold.ttf in Resources */,
 				D714F61326D4E45B0076E5FD /* LaunchScreen.storyboard in Resources */,
 				D714F61026D4E45B0076E5FD /* Assets.xcassets in Resources */,
+				D780B2A226E8EFCF005C065C /* Nexa-Trial-LightItalic.ttf in Resources */,
+				D780B29E26E8EFA4005C065C /* Nexa-Trial-Book.ttf in Resources */,
 				D70307C026DE256C00B6F8F1 /* MenuTableViewCell.xib in Resources */,
 				D714F60E26D4E4590076E5FD /* Main.storyboard in Resources */,
 			);

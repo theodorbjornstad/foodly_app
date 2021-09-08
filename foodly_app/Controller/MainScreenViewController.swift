@@ -28,6 +28,7 @@ class MainScreenViewController: UIViewController, CLLocationManagerDelegate {
         
         self.registerTableViewCells()
         self.navigationItem.backButtonTitle = " "
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "Nexa-Trial-Book", size: 20)!]
         
         fetchRestaurantInfo()
     }
