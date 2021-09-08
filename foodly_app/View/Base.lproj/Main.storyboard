@@ -250,6 +250,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="gKv-1c-oVX"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">

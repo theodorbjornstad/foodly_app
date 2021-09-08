@@ -22,6 +22,9 @@ class CheckoutTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         itemView.layer.cornerRadius = 10
+        
+        itemNameLabel.font = UIFont(name: "Nexa-Trial-Bold", size: 17)
+        itemPriceLabel.font = UIFont(name: "Nexa-Trial-Book", size: 15)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
